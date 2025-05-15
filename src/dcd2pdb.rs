@@ -15,7 +15,7 @@ pub fn run(traj: String, topo: String, nframe: usize, output: String) -> Result<
 		for chain in model.chains() {
 			for residue in chain.residues() {
 				for atom in residue.atoms() {
-					let before: String = format!("ATOM  {0:>5}{1:>4} {2:>4} {3:>1}{4:>4}    ",
+					let before: String = format!("ATOM  {0:>5} {1:>4} {2:>3} {3:>1}{4:>4}    ",
 						atom.atom_number(),
 						atom.atom_name_as_str(),
 						residue.residue_name_as_str(),
